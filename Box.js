@@ -16,6 +16,12 @@ class Box {
     if(this.body.speed<3){
       this.body.display();
     }
+    else{
+  World.remove(world,this.body);
+  push();
+  this.visiblity=this.visiblity-5;
+  tint(255,this.visiblity);
+    }
     var pos =this.body.position;
     rectMode(CENTER);
     fill(this.color);
